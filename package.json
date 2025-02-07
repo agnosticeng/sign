@@ -6,16 +6,18 @@
     "dist"
   ],
   "main": "./dist/sign.umd.cjs",
+  "types": "./dist/sign.d.ts",
   "module": "./dist/sign.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/sign.js",
       "require": "./dist/sign.umd.cjs"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "preview": "vite preview"
   },
   "devDependencies": {
